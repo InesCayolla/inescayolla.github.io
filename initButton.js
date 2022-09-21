@@ -1,13 +1,18 @@
 const button = document.querySelector('.button');
 const text = document.querySelector('.text');
+const bi = document.querySelector('i');
 
-const first = "<h1>Hi, my name is Ines! <br> I'm a fullstack developer and...<br></h1><p>(1/2)</p>"
-const second = "<h1>now I know JavaScript and have to complete the text. Ouch!<br></h1><p>(2/2)</p>"
+const first = "<h3>Hi, my name is Ines! I'm a fullstack developer and...<br></h3>"
+const second = "<h3>let's discover some cool projects!<br></h3>"
+const third = "bi bi-hand-index"
+const fourth = "bi bi-emoji-smile"
 
 button.addEventListener('click', () => {
   if (text.innerHTML === second) {
     text.innerHTML = first;
+    bi.className = third;
   } else {
-    text.innerHTML = second;
+    text.innerHTML = second, fourth;
+    bi.className = fourth;
   }
 });
